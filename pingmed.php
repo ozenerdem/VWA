@@ -55,7 +55,7 @@
                         }
                     }
                     if ($arraySize == $status) {
-                        exec("ping -c5 $input", $out);
+                        exec("ping -c3 $input", $out);
                         if (!empty($out)) {
                             echo '<div class="mt-5 alert alert-primary" role="alert" style=" width:500px;" > <strong>  <p style="text-align:center;">';
                             foreach ($out as $line) {
