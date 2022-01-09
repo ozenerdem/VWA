@@ -43,7 +43,7 @@
                 <?php
                 if (isset($_POST["ip"])) {
                     $input = $_POST["ip"];
-                    $blacklists = array(" ", "&", ";", "@", "%", "^", "'", "<", ">", ",", "\\", "/", "ls", "cat", "less", "tail", "more", "whoami", "pwd", "echo", "ps");
+                    $blacklists = array(" ", "&", ";", "%", "^", "'", "<", ">", ",", "\\", "/", "ls", "cat", "less", "tail", "more", "whoami", "pwd", "echo", "ps");
                     //$blacklists = array("whoami");
                     $arraySize = sizeof($blacklists);
                     $status = 0;
