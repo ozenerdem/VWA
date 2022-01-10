@@ -13,66 +13,63 @@
 
 <body>
 
-<div class="d-flex justify-content-center">
-    <h1>SEZI</h1>
-</div>
-<div class="d-flex justify-content-center">
-    <h2>Welcome To The Command Injection Site!</h2>
-</div>
-<div class="d-flex justify-content-center">
-    <div class="container text-center">
-        <div class="main-wrapper" style="margin-top: 25vh;">
-            <div class="header-wrapper">
-                <h2 class="col">PING</h2>
-            </div>
-            <div class="col-md-auto mt-3 d-flex justify-content-center flex-column">
-                <form method="POST" >
-                    <div class="d-flex justify-content-center">
-                        <input class="form-control" type="text" placeholder="Enter an ip address" name="ip" style="width: 500px;">
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-4" style=" width: 500px;">Ping</button>
-                </form>
-                <form action="pingmed.php">
-                    <button type="submit" class="btn btn-primary mt-4" style=" width: 500px;">Med</button>
-                </form>
+    <div class="d-flex justify-content-center">
+        <h1>SEZI</h1>
+    </div>
+    <div class="d-flex justify-content-center">
+        <h2>Welcome To The Command Injection Site!</h2>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="container text-center">
+            <div class="main-wrapper" style="margin-top: 25vh;">
+                <div class="header-wrapper">
+                    <h2 class="col">PING</h2>
+                </div>
+                <div class="col-md-auto mt-3 d-flex justify-content-center flex-column">
+                    <form method="POST">
+                        <div class="d-flex justify-content-center">
+                            <input class="form-control" type="text" placeholder="Enter an ip address" name="ip" style="width: 500px;">
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-4" style=" width: 500px;">Ping</button>
+                    </form>
 
 
-            </div>
+                </div>
 
-            <div class="col-md-auto d-flex justify-content-center" style="">
-                <?php
-                if (isset($_POST["ip"])) {
-                    $input = $_POST["ip"];
-                    $blacklists = array(" ", "&", ";", "%", "^", "'", "<", ">", ",", "\\", "/", "ls", "cat", "less", "tail", "more", "whoami", "pwd", "echo", "ps");
-                    //$blacklists = array("whoami");
-                    $arraySize = sizeof($blacklists);
-                    $status = 0;
+                <div class="col-md-auto d-flex justify-content-center" style="">
+                    <?php
+                    if (isset($_POST["ip"])) {
+                        $input = $_POST["ip"];
+                        $blacklists = array(" ", "&", ";", "%", "^", "'", "<", ">", ",", "\\", "/", "ls", "cat", "less", "tail", "more", "whoami", "pwd", "echo", "ps");
+                        //$blacklists = array("whoami");
+                        $arraySize = sizeof($blacklists);
+                        $status = 0;
 
-                    foreach ($blacklists as $blacklist) {
-                        if (!strstr($input, $blacklist)) {
-                            //$input = str_replace($blacklist,"", $input);
-                            $status++;
-                        }
-                    }
-                    if ($arraySize == $status) {
-                        exec("ping -c3 $input", $out);
-                        if (!empty($out)) {
-                            echo '<div class="mt-5 alert alert-primary" role="alert" style=" width:500px;" > <strong>  <p style="text-align:center;">';
-                            foreach ($out as $line) {
-                                echo $line;
-                                echo "<br>";
+                        foreach ($blacklists as $blacklist) {
+                            if (!strstr($input, $blacklist)) {
+                                //$input = str_replace($blacklist,"", $input);
+                                $status++;
                             }
-                            echo ' </p></strong></div>';
                         }
-                    } else {
-                        echo '<div class="mt-5 alert alert-danger" role="alert" style=" width:500px;" > <strong>  <p style="text-align:center;">ERROR</p></strong></div>';
+                        if ($arraySize == $status) {
+                            exec("ping -c3 $input", $out);
+                            if (!empty($out)) {
+                                echo '<div class="mt-5 alert alert-primary" role="alert" style=" width:500px;" > <strong>  <p style="text-align:center;">';
+                                foreach ($out as $line) {
+                                    echo $line;
+                                    echo "<br>";
+                                }
+                                echo ' </p></strong></div>';
+                            }
+                        } else {
+                            echo '<div class="mt-5 alert alert-danger" role="alert" style=" width:500px;" > <strong>  <p style="text-align:center;">ERROR</p></strong></div>';
+                        }
                     }
-                }
-                ?>
+                    ?>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </body>
 
 </html>
