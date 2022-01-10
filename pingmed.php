@@ -11,19 +11,17 @@
 </head>
 
 <body>
+    <div style="margin-top: 15%;">
+        <div class="d-flex justify-content-center">
+            <h1>SEZI</h1>
+        </div>
+        <div class="d-flex justify-content-center">
+            <h2>Welcome To The Command Injection Site!</h2>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="container text-center">
 
-    <div class="d-flex justify-content-center">
-        <h1>SEZI</h1>
-    </div>
-    <div class="d-flex justify-content-center">
-        <h2>Welcome To The Command Injection Site!</h2>
-    </div>
-    <div class="d-flex justify-content-center">
-        <div class="container text-center">
-            <div class="main-wrapper" style="margin-top: 25vh;">
-                <div class="header-wrapper">
-                    <h2 class="col">PING</h2>
-                </div>
+                <h2 class="col">PING</h2>
                 <div class="col-md-auto mt-3 d-flex justify-content-center flex-column">
                     <form method="POST">
                         <div class="d-flex justify-content-center">
@@ -31,8 +29,6 @@
                         </div>
                         <button type="submit" class="btn btn-primary mt-4" style=" width: 500px;">Ping</button>
                     </form>
-
-
                 </div>
 
                 <div class="col-md-auto d-flex justify-content-center" style="">

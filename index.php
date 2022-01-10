@@ -20,10 +20,7 @@
         </div>
         <div class="d-flex justify-content-center">
             <div class="container text-center">
-
-                <div class="header-wrapper">
-                    <h2 class="col">PING</h2>
-                </div>
+                <h2 class="col">PING</h2>
                 <div class="col-md-auto mt-3 d-flex justify-content-center flex-column">
                     <form method="POST">
                         <div class="d-flex justify-content-center">
