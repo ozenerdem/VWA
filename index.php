@@ -11,16 +11,16 @@
 </head>
 
 <body>
+    <div style="margin:15%">
+        <div class="d-flex justify-content-center">
+            <h1>SEZI</h1>
+        </div>
+        <div class="d-flex justify-content-center">
+            <h2>Welcome To The Command Injection Site!</h2>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="container text-center">
 
-    <div class="d-flex justify-content-center">
-        <h1>SEZI</h1>
-    </div>
-    <div class="d-flex justify-content-center">
-        <h2>Welcome To The Command Injection Site!</h2>
-    </div>
-    <div class="d-flex justify-content-center">
-        <div class="container text-center">
-            <div class="main-wrapper" style="margin-top: 25vh;">
                 <div class="header-wrapper">
                     <h2 class="col">PING</h2>
                 </div>
@@ -38,7 +38,7 @@
 
                 </div>
 
-                <div class="col-md-auto d-flex justify-content-center" style="">
+                <div class="col-md-auto d-flex justify-content-center">
 
                     <?php
                     if (isset($_POST["ip"])) {
