@@ -42,7 +42,7 @@
             </div>
 
             <div class="col-md-auto d-flex justify-content-center" style="">
-                <!--            backend kısmı farklı şekilde yazılacak    -->
+                <!--            backend kısmı değiştirilecek    -->
                 <?php
                 if (isset($_POST["ip"])) {
                     $input = $_POST["ip"];

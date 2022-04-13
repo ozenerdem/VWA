@@ -1,5 +1,5 @@
 <?php require admin_view('static/header') ?>
-
+<!--
     <div class="box-container">
         <div class="box" id="div-0">
             <h3>Title was here!</h3>
@@ -69,5 +69,5 @@
             </div>
         </div>
     </div>
-
+-->
 <?php require admin_view('static/footer') ?>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Sezi Admin Panel</title>
 
     <!--styles-->
     <link rel="stylesheet" href="<?= admin_public_url('styles/main.css') ?>">
@@ -25,38 +25,38 @@
             <a href="#">
                 <span class="fa fa-home"></span>
                 <span class="title">
-            ANOTHER WORDPRESS SITE
+            SEZİ Admin Panel
         </span>
             </a>
         </li>
+<!--        <li>-->
+<!--            <a href="#">-->
+<!--                <span class="fa fa-comment"></span>-->
+<!--                1-->
+<!--            </a>-->
+<!--        </li>-->
         <li>
-            <a href="#">
-                <span class="fa fa-comment"></span>
-                1
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span class="fa fa-plus"></span>
-                <span class="title">New</span>
-            </a>
-            <ul>
-                <li>
-                    <a href="#">
-                        New Post
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        New Page
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        New Category
-                    </a>
-                </li>
-            </ul>
+<!--            <a href="#">-->
+<!--                <span class="fa fa-plus"></span>-->
+<!--                <span class="title">New</span>-->
+<!--            </a>-->
+<!--            <ul>-->
+<!--                <li>-->
+<!--                    <a href="#">-->
+<!--                        New Post-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="#">-->
+<!--                        New Page-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <a href="#">-->
+<!--                        New Category-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--            </ul>-->
         </li>
     </ul>
 </div>

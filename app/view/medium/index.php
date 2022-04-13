@@ -10,28 +10,33 @@
 </head>
 <body>
 <h1>MEDIUM</h1>
-<form action="" method="post" class="form label">
-    <li>
-        <label>Site Teması</label>
-        <div class="form-content">
-            <select name="settings[theme]">
-                <option value=""> - Tema Seç -</option>
-                <?php foreach ($themes as $theme): ?>
-                    <option <?= setting('theme') == $theme ? ' selected ' : null ?>
-                        value="<?= $theme ?>"><?= $theme ?></option>
-                <?php endforeach; ?>
-            </select>
-        </div>
-    </li>
-    <li class="submit">
+<a href="<?= site_url('commandInjection_med') ?>">Command Injection</a><br>
+<a href="<?= site_url('xssReflected') ?>">XSS Reflected</a><br>
+<a href="<?= site_url('admin') ?>">Admin Page</a><br><br>
+
+<div>
+    <form action="" method="post" class="form label">
+        <li>
+            <label>Site Teması</label>
+            <div class="form-content">
+                <select name="settings[theme]">
+                    <option value=""> - Tema Seç -</option>
+                    <?php foreach ($themes as $theme): ?>
+                        <option <?= setting('theme') == $theme ? ' selected ' : null ?>
+                                value="<?= $theme ?>"><?= $theme ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </li>
+        <!--        <li class="submit">-->
         <input type="hidden" name="submit" value="1">
         <button type="submit">Ayarları Kaydet</button>
-    </li>
-    </ul>
-</form>
-<h3><?= setting('title') ?></h3>
-<a href="<?= site_url('commandInjection_med') ?>">Command Injection</a><br>
-<a href="<?= site_url('admin') ?>">Admin Page</a>
+        <!--        </li>-->
+        </ul>
+    </form>
+</div>
+
+
 
 
 </body>
