@@ -17,6 +17,10 @@ if(!file_exists(controller(route(0))) AND !$_SERVER['QUERY_STRING'] AND (!$getRo
     $route[0] = '404';
 }
 
+// Bakım Modu Yönlendirmede hata var.
+if(setting('maintenance_mode') == 1 && route(0) != 'admin'){
+    $route[0] = 'maintenance_mode';
+}
 
 if(!$_GET AND ($getRoute[0] == "" OR $getRoute[0] == NULL) OR $route[0] == '404' ){
     require controller(route(0));

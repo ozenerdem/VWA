@@ -1,71 +1,86 @@
-<!DOCTYPE html>
-<html>
+<?php require view('static/header')?>
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href="/main.css">
-    <script src='main.js'></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Command Injection</h1>
+        <div class="col-md-auto mt-3 d-flex justify-content-center flex-column">
+            <form method="POST">
+                <div class="d-flex justify-content-center">
+                    <input class="form-control" type="text" placeholder="Enter an ip address" name="ip"
+                           style="width: 500px;">
+                </div>
+                <button type="submit" class="btn btn-primary mt-4" style=" width: 500px;">Ping</button>
+            </form>
+        </div>
 
-<body>
+        <div class="col-md-auto d-flex justify-content-center" style="">
+            <!--            backend kısmı değiştirilecek    -->
+            <?php
+            if (isset($_POST["ip"])) {
+                $input = $_POST["ip"];
+                echo "<br /><br />";
 
-<div class="d-flex justify-content-center">
-    <h1>SEZI</h1>
-</div>
-<div class="d-flex justify-content-center">
-    <h2>Welcome To The Command Injection Site!</h2>
-</div>
-<div class="d-flex justify-content-center">
-    <div class="container text-center">
-        <div class="main-wrapper">
-            <div class="header-wrapper">
-                <h2 class="col">PING</h2>
-            </div>
-            <div class="col-md-auto mt-3 d-flex justify-content-center flex-column">
-                <form method="POST">
-                    <div class="d-flex justify-content-center">
-                        <input class="form-control" type="text" placeholder="Enter an ip address" name="ip"
-                               style="width: 500px;">
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-4" style=" width: 500px;">Ping</button>
-                </form>
-                <!--                <form action="pingmed.php">-->
-                <!--                    <button type="submit" class="btn btn-primary mt-4" style=" width: 500px;">Med</button>-->
-                <!--                </form>-->
+                exec("ping -c3 $input", $output);
+                if (!empty($output)) {
 
+                    echo '<div class="mt-5 alert alert-primary" role="alert" style=" width:500px;" > <strong>  <p style="text-align:center;">';
+                    foreach ($output as $line) {
 
-            </div>
-
-            <div class="col-md-auto d-flex justify-content-center" style="">
-                <!--            backend kısmı değiştirilecek    -->
-                <?php
-                if (isset($_POST["ip"])) {
-                    $input = $_POST["ip"];
-                    echo "<br /><br />";
-
-                    exec("ping -c3 $input", $output);
-                    if (!empty($output)) {
-
-                        echo '<div class="mt-5 alert alert-primary" role="alert" style=" width:500px;" > <strong>  <p style="text-align:center;">';
-                        foreach ($output as $line) {
-
-                            echo $line;
-                            echo "<br>";
-                        }
-                        echo ' </p></strong></div>';
+                        echo $line;
+                        echo "<br>";
                     }
+                    echo ' </p></strong></div>';
                 }
+            }
 
-                ?>
+            ?>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row pb-2">
+        <div class="col-md-12">
+            <h4 class="pb-3">Neler yapıyorum?</h4>
+        </div>
+        <div class="col-md col-12 pb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">PSD/Sketch to HTML</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Front-end Developer</h6>
+                    <p class="card-text">Photoshop ya da .sketch dosyalarınızı gönderin, html5/css3 kodlanmış şekilde
+                        geri alın.</p>
+                    <a href="#" class="btn btn-sm btn-danger">Referanslara Gözat <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md col-12 pb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Web Yazılım</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Back-end Developer</h6>
+                    <p class="card-text">Projelerinize hayat verip dinamiklik katıyorum. Yazılım dili olarak PHP
+                        kullanıyorum.</p>
+                    <a href="#" class="btn btn-sm btn-primary">Referanslara Gözat <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md col-12 pb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Mobil Uygulama</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Mobile Developer</h6>
+                    <p class="card-text">Native değil ama hybrid olarak istediğin projenin mobil uygulamasını yazıyorum.
+                        İster react ister cordova.</p>
+                    <a href="#" class="btn btn-sm btn-dark">Referanslara Gözat <i class="fa fa-angle-right"></i></a>
+                </div>
             </div>
         </div>
     </div>
 </div>
-</body>
 
-</html>
+<?php require view('static/footer')?>
+
+
+
+
+
