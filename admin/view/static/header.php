@@ -17,7 +17,7 @@
 
 </head>
 <body>
-
+<?php if (session('user_rank') && session('user_rank') != 3): ?>
 <!--navbar-->
 <div class="navbar">
     <ul dropdown>
@@ -25,8 +25,13 @@
             <a href="#">
                 <span class="fa fa-home"></span>
                 <span class="title">
-            SEZİ Admin Panel
+            <?=setting('title')?>
         </span>
+            </a>
+        </li>
+        <li>
+            <a href="<?=admin_url('logout')?>">
+                Çıkış Yap
             </a>
         </li>
 <!--        <li>-->
@@ -101,3 +106,11 @@
 
 <!--content-->
 <div class="content">
+
+    <?php if(isset($error)): ?>
+    <div class="message error box-">
+        <?=$error ?>
+    </div>
+    <?php endif; ?>
+
+<?php endif; ?>
