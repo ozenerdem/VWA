@@ -19,7 +19,7 @@ if($data = form_control('phone')){
     }else{
         $json['error'] = 'Bir sorun oluştu, mesajınız gönderilemedi!';
     }
-    
+
     }
 
 }else{

@@ -26,6 +26,10 @@ $menus = [
             'users' => 'Üyeleri Listele'
         ]
     ],
+    'contact' => [
+      'title' => 'iletişim Mesajları',
+      'icon' => 'envelope'
+    ],
     'settings' => [
         'title' => 'Ayarlar',
         'icon' => 'cog'
