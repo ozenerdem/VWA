@@ -23,7 +23,8 @@ if (post('submit')){
             $result = User::Register([
                'username' => $username,
                'url' => permalink($username),
-               'password' => password_hash($password, PASSWORD_DEFAULT)
+               //'password' => password_hash($password, PASSWORD_DEFAULT)
+               'password' => $password
             ]);
             if($result){
                 $success = 'Üyeliğiniz başarıyla oluşturuldu';

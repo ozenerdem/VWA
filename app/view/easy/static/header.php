@@ -56,7 +56,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?= site_url('commandInjection') ?>">Command Injection</a>
                         <a class="dropdown-item" href="<?= site_url('xssReflected') ?>">XSS Reflected</a>
-                        <a class="dropdown-item" href="<?= site_url('login') ?>">SQL Injection</a>
+                        <a class="dropdown-item" href="<?= site_url('sqlInjection') ?>">SQL Injection</a>
                     </div>
                 </li>
                 <li class="nav-item">
