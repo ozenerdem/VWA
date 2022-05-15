@@ -57,7 +57,7 @@
                     </div>
                 <?php endif; ?>
                 <div class="form-group">
-                    <label for="username">Kullanıcı Adınız</label>
+                    <label for="username">Kullanıcı Adı</label>
                     <input type="text" value="<?= post('username') ?>" class="form-control" name="username"
                            id="username" placeholder="Kullanıcı adınızı yazın..">
                 </div>
@@ -66,11 +66,11 @@
                 <!--                    <input type="text" class="form-control" id="email"placeholder="E-posta adresinizi yazın..">-->
                 <!--                </div>-->
                 <div class="form-group">
-                    <label for="password">Şifreniz</label>
+                    <label for="password">Parola</label>
                     <input type="password" class="form-control" name="password" id="password" placeholder="*******">
                 </div>
                 <div class="form-group">
-                    <label for="password-again">Şifreniz (Tekrar)</label>
+                    <label for="password-again">Parola (Tekrar)</label>
                     <input type="password" class="form-control" name="password_again" id="password-again"
                            placeholder="*******">
                 </div>

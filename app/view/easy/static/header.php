@@ -45,9 +45,9 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="<?= site_url('index') ?>">Anasayfa</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                </li>
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="#">Blog</a>-->
+<!--                </li>-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -56,11 +56,15 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?= site_url('commandInjection') ?>">Command Injection</a>
                         <a class="dropdown-item" href="<?= site_url('xssReflected') ?>">XSS Reflected</a>
-                        <a class="dropdown-item" href="<?= site_url('sqlInjection') ?>">SQL Injection</a>
+                        <a class="dropdown-item" href="<?= site_url('sqlInjection') ?>">SQL Injection - Bypass Authentication</a>
+                        <a class="dropdown-item" href="<?= site_url('sqli_extractData') ?>">SQL Injection - Extract Data</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hakkımda</a>
+                    <a class="nav-link" href="<?=site_url('csrf')?>">CSRF</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?=site_url('about')?>">Hakkımda</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?=site_url('contact')?>">İletişim</a>

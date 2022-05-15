@@ -23,6 +23,7 @@ if (post('submit')){
             $success = 'Başarıyla giriş yaptınız, yönlendiriliyorsunuz';
             User::Login($row);
             header('Refresh:2;url=' . site_url());
+            //header('Location:' . (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER']: site_url()));
         } else {
             $error = 'Kullanıcı adı veya şifreniz hatalı!';
         }

@@ -12,8 +12,8 @@ spl_autoload_register('loadClasses');
 $config = require __DIR__ . '/config.php';
 
 try{
-    // $db = new PDO('mysql:host=' . $config['db']['host'] . ';dbname='
-    //    . $config['db']['name'], $config['db']['user'], $config['db']['pass']);
+//     $db = new PDO('mysql:host=' . $config['db']['host'] . ';dbname='
+//        . $config['db']['name'], $config['db']['user'], $config['db']['pass']);
     // BasicDB Entegrasyonu
     $db = new basicdb($config['db']['host'], $config['db']['name'], $config['db']['user'], $config['db']['pass']);
 }catch(PDOException $e){

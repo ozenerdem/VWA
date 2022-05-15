@@ -23,4 +23,11 @@ class User{
         $query = $db->prepare('INSERT INTO users SET user_name = :username, user_url = :url, user_password = :password');
         return $query->execute($data);
     }
+
+//    public static function updatePassword($data){
+//        global $db;
+//        $query = $db->prepare('UPDATE users set user_password = :password WHERE user_id = :user_id');
+//        return $query->execute($password);
+//    }
+
 }
