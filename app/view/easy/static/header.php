@@ -56,6 +56,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?= site_url('commandInjection') ?>">Command Injection</a>
                         <a class="dropdown-item" href="<?= site_url('xssReflected') ?>">XSS Reflected</a>
+                        <a class="dropdown-item" href="<?= site_url('xssStored') ?>">XSS Stored</a>
                         <a class="dropdown-item" href="<?= site_url('sqlInjection') ?>">SQL Injection - Bypass Authentication</a>
                         <a class="dropdown-item" href="<?= site_url('sqli_extractData') ?>">SQL Injection - Extract Data</a>
                     </div>

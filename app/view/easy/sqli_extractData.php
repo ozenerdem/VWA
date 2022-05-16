@@ -27,7 +27,7 @@
                 <!--                    <input type="text" class="form-control" id="email"placeholder="E-posta adresinizi yazın..">-->
                 <!--                </div>-->
                 <input type="hidden" name="submit" value="1">
-                <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                <button type="submit" class="btn btn-primary">Bilgileri Getir</button>
                 <?php if ($query):
                     while ($row = $query->fetch(PDO::FETCH_ASSOC)){ ?>
                     <div class="alert alert-success" role="alert">
