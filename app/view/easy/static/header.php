@@ -51,7 +51,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Injection
+                        Vulnerabilities
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?= site_url('commandInjection') ?>">Command Injection</a>
@@ -59,10 +59,10 @@
                         <a class="dropdown-item" href="<?= site_url('xssStored') ?>">XSS Stored</a>
                         <a class="dropdown-item" href="<?= site_url('sqlInjection') ?>">SQL Injection - Bypass Authentication</a>
                         <a class="dropdown-item" href="<?= site_url('sqli_extractData') ?>">SQL Injection - Extract Data</a>
+                        <a class="dropdown-item" href="<?=site_url('csrf')?>">CSRF</a>
+                        <a class="dropdown-item" href="<?=site_url('fileUpload')?>">File Upload</a>
+                        <a class="dropdown-item" href="<?=site_url('dirTraversal')?>">Directory Traversal</a>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?=site_url('csrf')?>">CSRF</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?=site_url('about')?>">Hakkımda</a>
