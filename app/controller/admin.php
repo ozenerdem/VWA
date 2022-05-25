@@ -22,7 +22,7 @@ $menus = [
         'title' => 'Üyeler',
         'icon' => 'user',
         'submenu' => [
-            'add-user' => 'Üye Ekle',
+//            'add-user' => 'Üye Ekle',
             'users' => 'Üyeleri Listele'
         ]
     ],

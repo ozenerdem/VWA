@@ -24,7 +24,7 @@ function user_ranks($rankId = null)
 {
     $ranks = [
         1 => 'Yönetici',
-        2 => 'Editör',
+//        2 => 'Editör',
         3 => 'Üye'
     ];
     return $rankId ? $ranks[$rankId] : $ranks;

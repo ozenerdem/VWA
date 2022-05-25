@@ -6,7 +6,7 @@ class User{
         $_SESSION['user_id'] = $data['user_id'];
         $_SESSION['user_name'] = $data['user_name'];
         $_SESSION['user_rank'] = $data['user_rank'];
-
+        $_SESSION['user_about'] = $data['user_about'];
     }
 
     public static function userExist($username){

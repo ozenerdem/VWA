@@ -24,14 +24,13 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
 
-<!--    <link rel="stylesheet" href="--><?//= public_url('styles/main.css') ?><!--">-->
+    <link rel="stylesheet" href="<?= public_url('styles/main.css') ?>">
     <script>
         var api_url = '<?=site_url('api')?>';
     </script>
     <script src="<?=public_url('scripts/api.js')?>"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="<?= site_url('index') ?>"><?= setting('logo') ?></a>
@@ -62,6 +61,7 @@
                         <a class="dropdown-item" href="<?=site_url('csrf')?>">CSRF</a>
                         <a class="dropdown-item" href="<?=site_url('fileUpload')?>">File Upload</a>
                         <a class="dropdown-item" href="<?=site_url('dirTraversal')?>">Directory Traversal</a>
+                        <a class="dropdown-item" href="<?=site_url('idor')?>">IDOR</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -71,11 +71,11 @@
                     <a class="nav-link" href="<?=site_url('contact')?>">İletişim</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0 mr-3">
-                <input class="form-control mr-sm-2" type="search" placeholder="<?= setting('search_placeholder') ?>"
-                       aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Ara</button>
-            </form>
+<!--            <form class="form-inline my-2 my-lg-0 mr-3">-->
+<!--                <input class="form-control mr-sm-2" type="search" placeholder="--><?//= setting('search_placeholder') ?><!--"-->
+<!--                       aria-label="Search">-->
+<!--                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Ara</button>-->
+<!--            </form>-->
             <?php if (session('user_id')): ?>
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"

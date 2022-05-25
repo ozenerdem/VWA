@@ -4,11 +4,11 @@
     <div class="login-screen">
 
         <!--login logo-->
-        <div class="login-logo">
-            <a href="#">
-                <img src="<?=admin_public_url('images/logo.png')?>" alt="">
-            </a>
-        </div>
+<!--        <div class="login-logo">-->
+<!--            <a href="#">-->
+<!--                <img src="--><?//=admin_public_url('images/logo.png')?><!--" alt="">-->
+<!--            </a>-->
+<!--        </div>-->
 
         <?php if (isset($error)): ?>
             <div class="message error box-">

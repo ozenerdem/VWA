@@ -45,8 +45,8 @@
         <h1 class="jumbotron-heading"><?=setting('welcome_title')?></h1>
         <p class="lead text-muted"><?=setting('welcome_text')?></p>
         <p>
-            <a href="#" class="btn btn-primary my-2">Blog'a Gözat</a>
-            <a href="#" class="btn btn-secondary my-2">İletişime Geç</a>
+<!--            <a href="#" class="btn btn-secondary my-2">Blog'a Gözat</a>-->
+            <a href="#" class="btn btn-primary my-2">İletişime Geç</a>
         </p>
     </div>
 </section>

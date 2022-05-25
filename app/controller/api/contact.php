@@ -25,3 +25,4 @@ if($data = form_control('phone')){
 }else{
     $json['error'] = 'Lütfen tüm alanları doldurup tekrar deneyin.';
 }
+
