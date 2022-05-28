@@ -9,7 +9,7 @@ if (post('submit')){
     $password = post('password');
     $password_again = post('password_again');
 
-    if(!username || !$password || !$password_again){
+    if(!$username || !$password || !$password_again){
         $error = 'Lütfen boş alan bırakmayınız';
     }elseif($password!=$password_again){
         $error = 'Girdiğiniz şifreler birbiriyle uyuşmuyor';

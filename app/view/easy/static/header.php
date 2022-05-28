@@ -62,6 +62,9 @@
                         <a class="dropdown-item" href="<?=site_url('fileUpload')?>">File Upload</a>
                         <a class="dropdown-item" href="<?=site_url('dirTraversal')?>">Directory Traversal</a>
                         <a class="dropdown-item" href="<?=site_url('idor')?>">IDOR</a>
+                        <a class="dropdown-item" href="<?=site_url('bruteForce')?>">Brute Force</a>
+                        <a class="dropdown-item" href="<?=site_url('brokenAuth')?>">Broken Authentication Login</a>
+                        <a class="dropdown-item" href="<?=site_url('brokenAuth_register')?>">Broken Authentication Register</a>
                     </div>
                 </li>
                 <li class="nav-item">

@@ -61,10 +61,6 @@
                     <input type="text" value="<?= post('username') ?>" class="form-control" name="username"
                            id="username" placeholder="Kullanıcı adınızı yazın..">
                 </div>
-                <!--                <div class="form-group">-->
-                <!--                    <label for="email">E-posta Adresiniz</label>-->
-                <!--                    <input type="text" class="form-control" id="email"placeholder="E-posta adresinizi yazın..">-->
-                <!--                </div>-->
                 <div class="form-group">
                     <label for="password">Parola</label>
                     <input type="password" class="form-control" name="password" id="password" placeholder="*******">

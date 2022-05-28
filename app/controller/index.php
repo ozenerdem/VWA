@@ -23,6 +23,5 @@ if (isset($_POST['submit'])) {
     header('Location:' . site_url('index'));
 }
 
-
 require view('index');
 

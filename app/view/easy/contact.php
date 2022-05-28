@@ -3,10 +3,10 @@
 <section class="jumbotron text-center">
     <div class="container">
         <h1>İLETİŞİM</h1>
-        <div class="breadcrumb-custom">
-            <a href="#">Anasayfa</a> /
-            <a href="#" class="active">İletişim</a>
-        </div>
+<!--        <div class="breadcrumb-custom">-->
+<!--            <a href="#">Anasayfa</a> /-->
+<!--            <a href="#" class="active">İletişim</a>-->
+<!--        </div>-->
     </div>
 </section>
 

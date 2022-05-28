@@ -19,6 +19,18 @@ function setting($name){
     return isset($settings[$name]) ? $settings[$name] : false;
 }
 
+//function IP(){
+//    if(getenv("HTTP_CLIENT_IP")){
+//        $ip = getenv("HTTP_CLIENT_IP");
+//    }elseif(getenv("HTTP_X_FORWARDED_FOR")){
+//        $ip = getenv("HTTP_X_FORWARDED_FOR");
+//        if(strstr($ip, ',')){
+//            $tmp = explode(',', $ip);
+//            $ip = trim($tmp[0]);
+//        }
+//    }
+//}
+
 function permalink($str, $options = array())
 {
     $str = mb_convert_encoding((string)$str, 'UTF-8', mb_list_encodings());

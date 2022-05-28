@@ -7,6 +7,12 @@ class User{
         $_SESSION['user_name'] = $data['user_name'];
         $_SESSION['user_rank'] = $data['user_rank'];
         $_SESSION['user_about'] = $data['user_about'];
+
+        // Login loglama işlemi
+        $logs = $_SESSION['user_id'] . " \t\t\t- " . $_SESSION['user_name'] . " \t- " . user_ranks($_SESSION['user_rank']) . " \t- " . $_SERVER["REMOTE_ADDR"] . " \t\t- " . date('Y-m-d H:i:s') . "\n";
+        $addLog = fopen('logFiles/login.txt', 'a');
+        fwrite($addLog, $logs);
+        fclose($addLog);
     }
 
     public static function userExist($username){
