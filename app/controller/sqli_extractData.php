@@ -1,10 +1,13 @@
 <?php
 
 //$query = $db->query("SELECT * FROM users WHERE user_name='".$_GET['username']."'")->fetch(PDO::FETCH_ASSOC);
-$query = $db->query("SELECT * FROM users WHERE user_name='".$_GET['username']."'");
-$row2 = $db->query("SELECT * FROM users WHERE user_name='".$_GET['username']."'")->fetch(PDO::FETCH_ASSOC);
 
-
+try{
+    $query = $db->query("SELECT * FROM users WHERE user_name='".$_GET['username']."'");
+    $row2 = $db->query("SELECT * FROM users WHERE user_name='".$_GET['username']."'")->fetch(PDO::FETCH_ASSOC);
+}catch (PDOException $e){
+    $error = "Hatalı giriş yaptınız";
+}
 
 //if($_GET AND !$query){
 //    $error = "Hatalı giriş yaptınız";

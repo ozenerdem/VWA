@@ -1,5 +1,37 @@
 <?php
 
+
+////error handler function
+//function customError($errno, $errstr)
+//{
+//    echo "<b>Error:</b> [$errno] $errstr";
+//}
+//
+////set error handler
+//set_error_handler("customError");
+//set_error_handler();
+//
+////trigger error
+//echo($test);
+
+
+////create function with an exception
+//function checkNum($number) {
+//
+//}
+//
+////trigger exception in a "try" block
+//try {
+//
+//    //If the exception is thrown, this text will not be shown
+//    echo 'If you see this, the number is 1 or below';
+//}
+//
+////catch exception
+//catch(Exception $e) {
+//    echo 'Message: ' .$e->getMessage();
+//}
+
 $meta = [
     'title' => setting('title'),
     'description' => setting('description'),

@@ -65,6 +65,7 @@
                         <a class="dropdown-item" href="<?=site_url('bruteForce')?>">Brute Force</a>
                         <a class="dropdown-item" href="<?=site_url('brokenAuth')?>">Broken Authentication Login</a>
                         <a class="dropdown-item" href="<?=site_url('brokenAuth_register')?>">Broken Authentication Register</a>
+                        <a class="dropdown-item" href="<?=site_url('errorCodes')?>">Security Misconfiguration(Error Codes)</a>
                     </div>
                 </li>
                 <li class="nav-item">

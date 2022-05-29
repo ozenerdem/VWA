@@ -14,11 +14,15 @@ if ($_POST['submit']) {
         $error = 'Lütfen boş alan bırakmayınız';
     } else {
         //üye var mı kontrol et
-        $query = $db->prepare("SELECT * FROM users WHERE user_name='$username' AND user_password='$password'");
-        $query->execute();
-        $row = $query->fetch(PDO::FETCH_ASSOC);
+        try{
+            $query = $db->prepare("SELECT * FROM users WHERE user_name='$username' AND user_password='$password'");
+            $query->execute();
+            $row = $query->fetch(PDO::FETCH_ASSOC);
+        }catch(PDOException $e){
+            //insignificant
+            $error = "Kullanıcı adı veya şifreniz hatalı!";
+        }
         //print_r($row);
-
         if ($row) {
             $success = 'Başarıyla giriş yaptınız, yönlendiriliyorsunuz';
             User::Login($row);

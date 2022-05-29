@@ -2,7 +2,6 @@
 
 <div class="container">
     <div class="row justify-content-md-center mt-4">
-
         <div class="col-md-4">
             <form action="" method="get">
 <!--                <h3 class="mb-3">SQL Injection GET</h3>-->
@@ -30,7 +29,7 @@
                 <button type="submit" class="btn btn-primary">Bilgileri Getir</button>
                 <?php if ($query):
                     while ($row = $query->fetch(PDO::FETCH_ASSOC)){ ?>
-                    <div class="alert alert-success" role="alert">
+                    <div class="alert alert-success my-3" role="alert">
                         <p>username: <?=$row['user_name'];?></p>
                         <p>userurl: <?=$row['user_url'];?></p>
                         <p>userrole: <?=user_ranks($row['user_rank']); ?></p>

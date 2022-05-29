@@ -1,6 +1,5 @@
 <?php
 
-
 $meta = [
     'title' => 'SQL Injection2'
 ];
