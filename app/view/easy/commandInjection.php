@@ -1,4 +1,4 @@
-<?php require view('static/header')?>
+<?php require view('static/header') ?>
 
 <section class="jumbotron text-center">
     <div class="container">
@@ -12,7 +12,6 @@
                 <button type="submit" class="btn btn-primary mt-4" style=" width: 500px;">Ping</button>
             </form>
         </div>
-
         <div class="col-md-auto d-flex justify-content-center" style="">
             <!--            backend kısmı değiştirilecek    -->
             <?php
@@ -25,21 +24,19 @@
 
                     echo '<div class="mt-5 alert alert-primary" role="alert" style=" width:500px;" > <strong>  <p style="text-align:center;">';
                     foreach ($output as $line) {
-
                         echo $line;
                         echo "<br>";
                     }
                     echo ' </p></strong></div>';
                 }
             }
-
             ?>
         </div>
     </div>
 </section>
 
 
-<?php require view('static/footer')?>
+<?php require view('static/footer') ?>
 
 
 

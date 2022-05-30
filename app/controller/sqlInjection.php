@@ -1,6 +1,5 @@
 <?php
-
-
+global $db;
 $meta = [
     'title' => 'SQL Injection'
 ];
@@ -10,10 +9,9 @@ $password = $_POST['password'];
 
 if ($_POST['submit']) {
 
-    if (!username || !$password) {
+    if (!$username || !$password) {
         $error = 'Lütfen boş alan bırakmayınız';
     } else {
-        //üye var mı kontrol et
         try{
             $query = $db->prepare("SELECT * FROM users WHERE user_name='$username' AND user_password='$password'");
             $query->execute();
@@ -32,6 +30,11 @@ if ($_POST['submit']) {
         }
     }
 }
+
+require view('sqlInjection');
+
+
+
 
 //if ($_POST['submit']) {
 //
@@ -53,7 +56,5 @@ if ($_POST['submit']) {
 //        }
 //    }
 //}
-
-require view('sqlInjection');
 
 ?>

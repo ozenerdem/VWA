@@ -10,7 +10,7 @@ $fileType=$getFile['type'];
 $fileSize=$getFile['size'];
 $fileTempName=$getFile['tmp_name'];
 
-//$myPath='/Applications/MAMP/htdocs/site/public/easy/uploads/'.$fileName;
+
 $myPath='public/easy/uploads/'.$fileName;
 if($_POST['submit']) {
     if(move_uploaded_file($fileTempName, $myPath)){
@@ -21,3 +21,5 @@ if($_POST['submit']) {
 }
 
 require view('fileUpload');
+
+//$myPath='/Applications/MAMP/htdocs/site/public/easy/uploads/'.$fileName;
