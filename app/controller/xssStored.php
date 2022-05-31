@@ -23,7 +23,6 @@ if($_POST['submit']){
     }
 }
 
-
 $query = $db->from('guestbook')
     ->select('sender_name, message_subject, message, message_date')
     ->groupBy('message_id')

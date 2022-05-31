@@ -39,7 +39,7 @@
                     </td>
                     <td>
                         <a href="<?= admin_url('edit-user?id=' . $row['user_id']) ?>" class="btn">Düzenle</a>
-                        <a onclick="return confirm('Silme işlemine devam ediyorsunuz?')"
+                        <a onclick="return confirm('Silme işlemine devam etmek istiyor musunuz?')"
                            href="<?= admin_url('delete?table=users&column=user_id&id=' . $row['user_id']) ?>"
                            class="btn">Sil</a>
                     </td>

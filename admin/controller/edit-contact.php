@@ -23,27 +23,27 @@ if($row['contact_read'] == 0){
         ]);
 }
 
-if (post('submit')){
-
-    //if ($data = form_control('user_email')){
-    if ($data = form_control()){
-
-        $data['user_url'] = permalink($data['user_name']);
-
-        $query = $db->update('users')
-            ->where('user_id', $id)
-            ->set($data);
-
-        if ($query){
-            header('Location:' . admin_url('users'));
-        } else {
-            $error = 'Bir sorun oluştu.';
-        }
-
-    } else {
-        $error = 'Eksik alanlar var, lütfen kontrol edin.';
-    }
-
-}
+//if (post('submit')){
+//
+//    //if ($data = form_control('user_email')){
+//    if ($data = form_control()){
+//
+//        $data['user_url'] = permalink($data['user_name']);
+//
+//        $query = $db->update('users')
+//            ->where('user_id', $id)
+//            ->set($data);
+//
+//        if ($query){
+//            header('Location:' . admin_url('users'));
+//        } else {
+//            $error = 'Bir sorun oluştu.';
+//        }
+//
+//    } else {
+//        $error = 'Eksik alanlar var, lütfen kontrol edin.';
+//    }
+//
+//}
 
 require admin_view('edit-contact');

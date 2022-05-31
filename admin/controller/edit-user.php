@@ -16,11 +16,8 @@ if (!$row){
 
 if (post('submit')){
 
-    //if ($data = form_control('user_email')){
     if ($data = form_control()){
-
         $data['user_url'] = permalink($data['user_name']);
-
         $query = $db->update('users')
             ->where('user_id', $id)
             ->set($data);
@@ -30,11 +27,10 @@ if (post('submit')){
         } else {
             $error = 'Bir sorun oluştu.';
         }
-
     } else {
         $error = 'Eksik alanlar var, lütfen kontrol edin.';
     }
-
 }
 
+//if ($data = form_control('user_email')){
 require admin_view('edit-user');

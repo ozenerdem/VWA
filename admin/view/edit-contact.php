@@ -12,7 +12,7 @@
         <form action="" method="post" class="form label">
             <ul>
                 <li>
-                    <label>Ad-Soay</label>
+                    <label>Ad-Soyad</label>
                     <div class="form-content" style="padding-top: 12px">
                         <?= $row['contact_name'] ?>
                     </div>
@@ -43,9 +43,9 @@
                         <?= nl2br($row['contact_message']) ?>
                     </div>
                 </li>
-                <li>
-                    <button name="submit" value="1" type="submit">Kaydet</button>
-                </li>
+<!--                <li>-->
+<!--                    <button name="submit" value="1" type="submit">Kaydet</button>-->
+<!--                </li>-->
             </ul>
         </form>
     </div>

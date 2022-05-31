@@ -11,15 +11,17 @@ try {
     $fault = $e->getMessage();
 }
 
+
+
+if ($_GET and !$query and !$fault) {
+    $error = "Hatalı giriş yaptınız";
+}
+
 //if($_GET){
 //    ini_set('display_errors', 1);
 //    ini_set('display_startup_errors', 1);
 //    error_reporting(E_ALL);
 //}
-
-if ($_GET and !$query and !$fault) {
-    $error = "Hatalı giriş yaptınız";
-}
 
 //$number1=10;
 //$number2=0;

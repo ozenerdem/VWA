@@ -27,7 +27,6 @@
     </div>
 </section>
 
-
 <?php require view('static/footer')?>
 
 

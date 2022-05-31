@@ -3,12 +3,13 @@
     <!--login screen-->
     <div class="login-screen">
 
-        <!--login logo-->
-<!--        <div class="login-logo">-->
-<!--            <a href="#">-->
+<!--        login logo-->
+        <div class="login-logo">
+            <a style="font-size: xx-large; color: rebeccapurple" href="<?=admin_url()?>">
 <!--                <img src="--><?//=admin_public_url('images/logo.png')?><!--" alt="">-->
-<!--            </a>-->
-<!--        </div>-->
+                sezi.com
+            </a>
+        </div>
 
         <?php if (isset($error)): ?>
             <div class="message error box-">

@@ -4,7 +4,6 @@ $meta = [
     'title' => 'Giriş Yap'
 ];
 
-
 if (post('submit')){
     $username = post('username');
     $password = post('password');

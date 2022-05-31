@@ -76,11 +76,11 @@
                     </div>
                 </li>
                 <li>
-                    <label>Arama Input Placeholder</label>
-                    <div class="form-content">
-                        <input type="text" name="settings[search_placeholder]" value="<?= setting('search_placeholder') ?>">
-                    </div>
-                </li>
+<!--                    <label>Arama Input Placeholder</label>-->
+<!--                    <div class="form-content">-->
+<!--                        <input type="text" name="settings[search_placeholder]" value="--><?//= setting('search_placeholder') ?><!--">-->
+<!--                    </div>-->
+<!--                </li>-->
                 <li>
                     <label>Footer Hakkımda</label>
                     <div class="form-content">

@@ -4,7 +4,6 @@ $themes = [];
 foreach (glob(PATH . '/app/view/*/') as $folder) {
     $folder = explode('/', rtrim($folder, '/'));
     $themes[] = end($folder);
-
 }
 
 if(isset($_POST['submit'])){
@@ -15,7 +14,6 @@ if(isset($_POST['submit'])){
     file_put_contents(PATH . '/app/settings.php', $html);
     header('Location:' . admin_url('settings'));
 }
-
 
 require admin_view('settings');
 

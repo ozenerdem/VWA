@@ -1,7 +1,7 @@
 <?php
 
 $query = $db->query("SELECT * FROM users WHERE user_name='".$_SESSION['user_name']."'")->fetch(PDO::FETCH_ASSOC);
-$query2 = $db->query("SELECT user_id FROM users WHERE user_id='".$_POST['user_id']."'")->fetch(PDO::FETCH_ASSOC);
+$query2 = $db->query("SELECT * FROM users WHERE user_id='".$_POST['user_id']."'")->fetch(PDO::FETCH_ASSOC);
 //$query = $db->query("SELECT * FROM users WHERE user_name='".$_GET['user_name']."'");
 //$row2 = $db->query("SELECT * FROM users WHERE user_name='".$_GET['user_name']."'")->fetch(PDO::FETCH_ASSOC);
 
@@ -22,16 +22,16 @@ if(isset($_POST['submit'])){
         'user_about' => $_POST['user_about']
     ]);
 
-    if($query2){
+    if($update){
         $success = 'İşlem başarılı';
     }else {
         $error = 'Bir hata oluştu';
     }
 
-header('Refresh:2;url=' . site_url('idor'));
+    header('Refresh');
+//header('Refresh:2;url=' . site_url('idor'));
 
 }
-
 
 if($_SESSION){
     require view('idor');

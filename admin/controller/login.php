@@ -12,8 +12,6 @@ if (post('submit')){
         if (!$row){
             $error = 'Girdiğiniz bilgiler hatalı, lütfen kontrol edin.';
         } else {
-            //$password_verify = password_verify($data['user_password'], $row['user_password']);
-
                 if ($row['user_rank'] == 3){
                     $error = 'Bu bölüme girmek için yetkiniz bulunmuyor!';
                 } else {
@@ -27,6 +25,7 @@ if (post('submit')){
     }
 }
 
+//$password_verify = password_verify($data['user_password'], $row['user_password']);
 // DB'de parolalar hashli tutulmadığı için değiştirildi.
 //if (post('submit')){
 //    if ($data = form_control()){
