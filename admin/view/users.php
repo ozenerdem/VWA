@@ -14,7 +14,6 @@
             <thead>
             <tr>
                 <th>Kullanıcı Adı</th>
-<!--                <th class="hide">E-posta</th>-->
                 <th class="hide">Kayıt Tarihi</th>
                 <th class="hide">Rütbe</th>
                 <th>İşlemler</th>
@@ -28,9 +27,6 @@
                             <?= $row['user_name'] ?>
                         </a>
                     </td>
-<!--                    <td class="hide">-->
-<!--                        --><?//= $row['user_email'] ?>
-<!--                    </td>-->
                     <td class="hide">
                         <?= $row['user_date'] ?>
                     </td>

@@ -9,7 +9,6 @@ function admin_view($viewName){
     return PATH . '/admin/view/' . $viewName . '.php';
 }
 
-
 function admin_url($url = false)
 {
     return URL . '/admin/' . $url;

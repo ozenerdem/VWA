@@ -1,5 +1,5 @@
 <?php
-// htmlspecialchars fonksiyonları değiştirilecek
+
 function post($name){
     if(isset($_POST[$name])){
         if(is_array($_POST[$name])) {

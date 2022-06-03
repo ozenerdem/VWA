@@ -1,6 +1,6 @@
 <?php require view('static/header') ?>
 
-</section>
+
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">File Upload</h1>

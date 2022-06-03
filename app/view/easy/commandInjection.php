@@ -18,7 +18,6 @@
             if (isset($_POST["ip"])) {
                 $input = $_POST["ip"];
                 echo "<br /><br />";
-
                 exec("ping -c3 $input", $output);
                 if (!empty($output)) {
 

@@ -1,33 +1,33 @@
 <?php require view('static/header') ?>
+<!--<div class="container">-->
+<!--    <div class="justify-content-md-center mt-4">-->
+<!--        <h1 class="d-flex justify-content-center mb-3">CSRF</h1>-->
+<!--        <h3>CSRF Nedir?</h3>-->
+<!--        <h3>Nasıl Sömürülür?</h3>-->
+<!--        <ul>-->
+<!--            <li> Öncelikle şifrenizi değiştiriniz.</li>-->
+<!--            <li> Daha sonra oluşan url'i kopyalayınız.</li>-->
+<!--            <li> Bir başka hesaba giriş yaparak url'i adres çubuğuna yapıştırınız.</li>-->
+<!--            <li> Girdiğiniz diğer hesabın parolasının da az önceki değiştirdiğiniz hesabın parolası ile aynı-->
+<!--                şekilde değiştiğini-->
+<!--                göreceksiniz.-->
+<!--            </li>-->
+<!--            <li> Bu zafiyetin önlenebilmesi için CSRF Token kullanılması gerekmektedir. Fakat hiçbir kontrol-->
+<!--                yapılmadığı için-->
+<!--                sadece url'i kopyalayarak farklı bir kullanıcıya göndermeniz ve o kullanıcının bu url'e-->
+<!--                tıklaması ile-->
+<!--                karşı tarafın şifresini değiştirebilmektesiniz.-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</div>-->
 <div class="container">
-    <div class="justify-content-md-center mt-4">
-        <h1 class="d-flex justify-content-center mb-3">CSRF</h1>
-        <h3>CSRF Nedir?</h3>
-        <h3>Nasıl Sömürülür?</h3>
-        <ul>
-            <li> Öncelikle şifrenizi değiştiriniz.</li>
-            <li> Daha sonra oluşan url'i kopyalayınız.</li>
-            <li> Bir başka hesaba giriş yaparak url'i adres çubuğuna yapıştırınız.</li>
-            <li> Girdiğiniz diğer hesabın parolasının da az önceki değiştirdiğiniz hesabın parolası ile aynı
-                şekilde değiştiğini
-                göreceksiniz.
-            </li>
-            <li> Bu zafiyetin önlenebilmesi için CSRF Token kullanılması gerekmektedir. Fakat hiçbir kontrol
-                yapılmadığı için
-                sadece url'i kopyalayarak farklı bir kullanıcıya göndermeniz ve o kullanıcının bu url'e
-                tıklaması ile
-                karşı tarafın şifresini değiştirebilmektesiniz.
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="container">
-    <hr>
+<!--    <hr>-->
     <div class="row justify-content-md-center mt-4">
 
         <div class="col-md-4">
             <form action="" method="get">
-<!--                <h3 class="mb-3">CSRF</h3>-->
+                <h3 class="mb-3">CSRF</h3>
 
                 <?php if ($err = error()): ?>
                     <div class="alert alert-danger" role="alert">

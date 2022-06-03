@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+// ob_start ile içeriğin görüntülenmeye hazır olana kadar sunucu tarafında arabellekte tutulması sağlanır.
 ob_start();
 date_default_timezone_set('Europe/Istanbul');
 

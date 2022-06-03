@@ -39,7 +39,6 @@
                     <input type="text" class="form-control" name="subject" id="subject">
                 </div>
             </div>
-
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="message">Mesaj İçeriği</label>
@@ -47,7 +46,6 @@
                 </div>
                 <button type="submit" onclick="contact('#contact-form')" class="btn btn-primary">Gönder</button>
             </div>
-
         </div>
     </form>
 </div>

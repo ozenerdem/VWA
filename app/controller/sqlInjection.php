@@ -8,7 +8,6 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 if ($_POST['submit']) {
-
     if (!$username || !$password) {
         $error = 'Lütfen boş alan bırakmayınız';
     } else {
