@@ -2,11 +2,33 @@
 
 <section class="jumbotron text-center">
     <div class="container">
-        <h1>XSS Stored</h1>
-<!--        <div class="breadcrumb-custom">-->
-<!--            <a href="#">Anasayfa</a> /-->
-<!--            <a href="#" class="active">Blog</a>-->
-<!--        </div>-->
+        <h1 class="jumbotron-heading text-center">XSS Stored Nedir?</h1><br>
+        <p>
+            Güncel olarak 2021 yılında yayınlanan OWASP Top 10 listesinde Injection başlığı altında yer alan zafiyet
+            çeşitlerinden birisidir. Web uygulaması üzerinde kullanıcıdan girdi (input) alınan her yerde bulunma
+            olasılığı yüksektir. Kullanıcının, girdiği verinin yanında ek olarak javascript kodu çalıştırabilmesi
+            zafiyetin bulunduğunu göstermektedir. XSS Reflected ile arasındaki fark ise; kullanıcının çalıştırdığı
+            javascript kodu sayfada yorum olarak depolanacağından siteyi her ziyaret eden kişi bu javascript kodunu
+            çalıştırmış olacaktır.
+        </p>
+        <hr>
+        <br>
+        <h1 class="jumbotron-heading text-center">Nasıl Sömürülür?</h1><br>
+        <ul style="text-align: justify">
+            <li>Bir form üzerinden tahmin edebileceğimiz en basit bulgu, ilgili alanlara girdiğiniz ifadelerin bir değişkende tutulacağıdır.</li>
+            <li>Dolayısıyla XSS – Stored Form Sayfasında yer alan “Ad-Soyad”, “Mesaj Konusu” ve “Mesaj içeriği” girdilerinizin de bir değişkene atanarak tutulduğunu tahmin edebilirsiniz.</li>
+            <li>Şimdi bir yorum yapmayı deneyiniz.</li>
+            <li>İlgili alanları doldurduğunuzda karşılaşmayı umduğunuz durum, “Son Yorumlar” başlığı altında adınızın ve mesajınızın görülmesidir.</li>
+            <li>Fakat web sitesinin, yine “1” şeklinde bir hata mesajı yolladığını farkedeceksiniz.</li>
+            <li>Bu senaryo karşısında, girdiğiniz değerlerin veritabanında herhangi bir filtreleme olmadan tutulduğu tespitini yapabilmeniz beklenmektedir.</li>
+            <li>Çünkü masum bir şekilde yaptığınız yorum karşısında bir uyarı mesajı aldınız. Ve bu uyarı mesajını sayfaya ilk girmeyi denediğinizde de almıştınız.</li>
+            <li>Bu duruma izin verilip verilmediğini denemek için “Ad-Soyad”, “Mesaj Konusu” ve “Mesaj içeriği” alanlarından birine bir javascript kodu yerleştirmeyi deneyiniz.</li>
+            <li>Örneğin &lt;script&gt; alert(1) &lt;/script&gt; kod satırını yazdığınızda da formu göndermenize izin verildiğini ve web sitesinin tekrardan “1” hata mesajı yolladığını göreceksiniz.</li>
+            <li>Dolayısıyla XSS- Stored Zafiyeti’nin, Reflected çeşidinden farklı olarak kullanıcıdan alınan girdileri sistemin veritabanına doğrudan kaydettiği çıkarımını ispatlamış oldunuz.</li>
+            <li>Buna bağlı olarak XSS- Stored sayfasına ilk girdiğinizde karşılaştığınız hata mesajının sebebine ulaştınız.</li>
+            <li>XSS – Stored zafiyeti sizin kodu eklediğiniz sayfayı ziyaret eden kullanıcıların maruz kalacağı bir güvenlik zafiyeti olduğunu görmüş oldunuz.</li>
+        </ul>
+
     </div>
 </section>
 <div class="container">
@@ -61,8 +83,9 @@
                         <div class="card-header">
                             <?= $row['message_id'] ?>
                             <div class="date" float="right">
-                                <span style="color: #999; font-size: 12px; float: right;" title="<?=$row['message_date']?>">
-                                    <?=timeConvert($row['message_date'])?>
+                                <span style="color: #999; font-size: 12px; float: right;"
+                                      title="<?= $row['message_date'] ?>">
+                                    <?= timeConvert($row['message_date']) ?>
                                 </span>
                             </div>
                             <div>

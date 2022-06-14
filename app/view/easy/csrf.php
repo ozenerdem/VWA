@@ -21,13 +21,48 @@
 <!--        </ul>-->
 <!--    </div>-->
 <!--</div>-->
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading text-center">CSRF Nedir?</h1><br>
+        <p style="text-align: justify">
+            Web uygulamasını kullanmakta olan kullanıcıların istekleri dışında işlemlerin gerçekleştirilebilmesi CSRF
+            (Siteler Arası İstek Sahtekarlığı) zafiyetinin varlığını göstermektedir. Uygulamaya giden isteklerin hangi
+            kaynaktan ve nasıl gönderildiği kontrol edilmediği taktirde ortaya çıkabilmektedir. Zafiyet çoğunlukla
+            siteyi kodlayan yazılımcıların bu ayrıntıları gözünden kaçırması durumunda oluşmaktadır. CSRF zafiyetinde
+            uygulamayı kullanmakta olan kullanıcının yetkinliğine bağlı olarak zararlar verilebilmektedir. Herhangi bir
+            kullanıcının hesabı ile sistem yöneticisinin hesabı üzerinden sızılan açıklıktan verilen zararın boyutu aynı
+            olmayacaktır.
+        </p>
+        <hr>
+        <br>
+        <h1 class="jumbotron-heading text-center">Nasıl Sömürülür?</h1><br>
+        <ul style="text-align: justify">
+            <li>CSRF zafiyetini sömürebilmek için ilk olarak aşağıda yer alan şifre güncelleme alanından mevcut
+                şifrenizi güncelleyiniz.
+            </li>
+            <li>İşlemi başarıyla tamamlandığında url adresine dikkat edilirse burada artık güncel parola değeri
+                gösterilmektedir. Parola bilgisinin gizli olması gerekirken url üzerinde gözükmesinden arka planda GET
+                metodunun kullanıldığı anlaşılabilmektedir.
+            </li>
+            <li>Kullanılan metod veri gizliliğini sağlamamakta ve güvenlik
+                risklerini arttırmaktadır.</li>
+            <li>Oluşan yeni url adresini kopyalayınız.</li>
+            <li>Oturumu açık olan başka bir kullanıcıya link göndererek bu bağlantıya girmesini sağlayınız.</li>
+            <li>Seçtiğiniz kullanıcı göndermiş olduğunuz url bağlantısına tıkladığında artık güncel parolası sizin
+                parolanız olacaktır.
+            </li>
+            <li>URL bağlantısı ile belirlediğiniz kullanıcıların hesaplarını bu yöntemi kullanarak ele
+                geçirebilirsiniz.
+            </li>
+        </ul>
+    </div>
+</section>
 <div class="container">
-<!--    <hr>-->
     <div class="row justify-content-md-center mt-4">
 
         <div class="col-md-4">
             <form action="" method="get">
-                <h3 class="mb-3">CSRF</h3>
+                <h3 class="mb-3">Uygulayalım</h3>
 
                 <?php if ($err = error()): ?>
                     <div class="alert alert-danger" role="alert">

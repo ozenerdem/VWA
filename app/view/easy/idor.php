@@ -1,5 +1,36 @@
 <?php require view('static/header') ?>
-
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading text-center">IDOR Nedir?</h1><br>
+        <p style="text-align: justify">
+            Bir web uygulamasında ya da herhangi farklı bir uygulamada, nesnelere doğrudan erişmek için kullanıcı
+            tarafından sağlanan girdinin kullanılması sonucu ortaya çıkan bir tür erişim denetimi (Access Control)
+            güvenlik açığıdır. IDOR zafiyeti bir nevi request değiştirme metodu uygulamaktadır. Bir kullanıcının izni
+            olmadan onun adına
+            veri ekleme, silme, değiştirme ya da okuma gibi işlemler yapılabilmektedir.
+        </p>
+        <hr>
+        <br>
+        <h1 class="jumbotron-heading text-center">Nasıl Sömürülür?</h1><br>
+        <ul style="text-align: justify">
+            <li>Profil sayfanızda yer alan hakkında alanını istediğiniz şekilde güncelleyebilirsiniz. Zafiyetin
+                sömürülmesinde bu alandan yararlanacağız.
+            </li>
+            <li>Öğeyi denetle yaparak kodları incelediğimizde &lt;input type="hidden" name="user_id" value=""&gt; şeklinde bir kod bloğu olduğunu görüyoruz. </li>
+            <li>Açılan kod satırları içerisinde kullanıcıya ait id değerinin yer aldığı satırı bulmanız gerekmektedir.
+                Backend tarafında id değeri post işlemi ile alındığından dolayı burada değer görülebilir ve
+                değiştirilebilir.
+            </li>
+            <li>Karşı tarafa iletmek istediğiniz mesajı girdi alanına yazınız ve id değerini değiştirerek
+                güncelleyiniz.
+            </li>
+            <li>Artık girdiğiniz id değerine sahip kullanıcının veri tabanında daha önceden tutulan hakkında bilgisi
+                ekranınızda gözükecek ve veri tabanında yer alan eski bilgi girdiğiniz bilgi ile güncellenecektir.
+                Dolayısıyla kullanıcı kendi hesabına giriş yaptığında artık sizin göndermiş olduğunuz mesajı görecektir.
+            </li>
+        </ul>
+    </div>
+</section>
 <div class="container">
     <div class="card m-5">
         <?php if ($err = error()): ?>
